@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "github-integration": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"
+      }
+    },
+    "memory-store": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-memory"]
+    }
+  }
+}

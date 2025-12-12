@@ -1,0 +1,20 @@
+{
+  "name": "test-mcp-project",
+  "version": "1.0.0",
+  "description": "A test project with MCP dependencies for testing MCP Audit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@anthropic/mcp-server-filesystem": "^0.1.0",
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/server-slack": "^0.1.0",
+    "mcp-server-github": "^1.0.0",
+    "typescript": "^5.0.0"
+  }
+}

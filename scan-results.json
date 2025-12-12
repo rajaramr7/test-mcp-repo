@@ -1,0 +1,250 @@
+{
+  "scan_time": "2025-12-11T22:30:29.203233",
+  "total_mcps": 17,
+  "mcps": [
+    {
+      "name": "filesystem",
+      "source": "@anthropic/mcp-server-filesystem",
+      "found_in": "Project (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/mcp.json",
+      "command": "npx",
+      "args": [
+        "@anthropic/mcp-server-filesystem",
+        "/home/user/documents"
+      ],
+      "env": {},
+      "risk_flags": [
+        "filesystem-access"
+      ]
+    },
+    {
+      "name": "slack",
+      "source": "@modelcontextprotocol/server-slack",
+      "found_in": "Project (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/mcp.json",
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-slack"
+      ],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-your-token-here"
+      },
+      "risk_flags": [
+        "secrets-in-env"
+      ]
+    },
+    {
+      "name": "postgres-db",
+      "source": "@modelcontextprotocol/server-postgres",
+      "found_in": "Project (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/mcp.json",
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-postgres"
+      ],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "postgresql://user:password@localhost:5432/mydb"
+      },
+      "risk_flags": [
+        "database-access"
+      ]
+    },
+    {
+      "name": "custom-shell-tools",
+      "source": "mcp-shell-tools",
+      "found_in": "Project (test-mcp-repo)",
+      "server_type": "python",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/mcp.json",
+      "command": "uvx",
+      "args": [
+        "mcp-shell-tools"
+      ],
+      "env": {},
+      "risk_flags": [
+        "shell-access"
+      ]
+    },
+    {
+      "name": "local-custom-server",
+      "source": "./scripts/my-custom-mcp.py",
+      "found_in": "Project (test-mcp-repo)",
+      "server_type": "local",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/mcp.json",
+      "command": "./scripts/my-custom-mcp.py",
+      "args": [
+        "--port",
+        "8080"
+      ],
+      "env": {},
+      "risk_flags": [
+        "local-binary"
+      ]
+    },
+    {
+      "name": "github-integration",
+      "source": "@modelcontextprotocol/server-github",
+      "found_in": "Project (.mcp)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/.mcp/config.json",
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_TOKEN": "ghp_xxxxxxxxxxxx"
+      },
+      "risk_flags": [
+        "secrets-in-env"
+      ]
+    },
+    {
+      "name": "memory-store",
+      "source": "@modelcontextprotocol/server-memory",
+      "found_in": "Project (.mcp)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/.mcp/config.json",
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {},
+      "risk_flags": []
+    },
+    {
+      "name": "@modelcontextprotocol/sdk",
+      "source": "@modelcontextprotocol/sdk@^1.0.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/package.json",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "@anthropic/mcp-server-filesystem",
+      "source": "@anthropic/mcp-server-filesystem@^0.1.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/package.json",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "@modelcontextprotocol/server-slack",
+      "source": "@modelcontextprotocol/server-slack@^0.1.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/package.json",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "mcp-server-github",
+      "source": "mcp-server-github@^1.0.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "npm",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/package.json",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "fastmcp",
+      "source": "fastmcp>=0.1.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "python",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/requirements.txt",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "modelcontextprotocol",
+      "source": "modelcontextprotocol>=0.1.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "python",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/requirements.txt",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "mcp",
+      "source": "mcp>=1.0.0",
+      "found_in": "Dependency (test-mcp-repo)",
+      "server_type": "python",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/requirements.txt",
+      "command": null,
+      "args": [],
+      "env": {},
+      "risk_flags": [
+        "dependency-only"
+      ]
+    },
+    {
+      "name": "mcp-server-postgres",
+      "source": "modelcontextprotocol/server-postgres:latest",
+      "found_in": "Docker Compose (test-mcp-repo)",
+      "server_type": "docker",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/docker-compose.yml",
+      "command": "docker",
+      "args": [
+        "run",
+        "modelcontextprotocol/server-postgres:latest"
+      ],
+      "env": {},
+      "risk_flags": []
+    },
+    {
+      "name": "mcp-filesystem-server",
+      "source": "anthropic/mcp-server-filesystem:latest",
+      "found_in": "Docker Compose (test-mcp-repo)",
+      "server_type": "docker",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/docker-compose.yml",
+      "command": "docker",
+      "args": [
+        "run",
+        "anthropic/mcp-server-filesystem:latest"
+      ],
+      "env": {},
+      "risk_flags": []
+    },
+    {
+      "name": "custom-mcp-server",
+      "source": "my-custom-mcp-server:latest",
+      "found_in": "Docker Compose (test-mcp-repo)",
+      "server_type": "docker",
+      "config_path": "/Users/rajaramramanathan/ACTIVE/MCPTOOLS/test-mcp-repo/docker-compose.yml",
+      "command": "docker",
+      "args": [
+        "run",
+        "my-custom-mcp-server:latest"
+      ],
+      "env": {},
+      "risk_flags": []
+    }
+  ]
+}

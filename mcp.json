@@ -1,0 +1,31 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["@anthropic/mcp-server-filesystem", "/home/user/documents"],
+      "env": {}
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-your-token-here"
+      }
+    },
+    "postgres-db": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "postgresql://user:password@localhost:5432/mydb"
+      }
+    },
+    "custom-shell-tools": {
+      "command": "uvx",
+      "args": ["mcp-shell-tools"]
+    },
+    "local-custom-server": {
+      "command": "./scripts/my-custom-mcp.py",
+      "args": ["--port", "8080"]
+    }
+  }
+}
