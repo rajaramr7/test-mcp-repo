@@ -2,26 +2,45 @@
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["@anthropic/mcp-server-filesystem", "/home/user/documents"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/user/documents"],
       "env": {}
     },
     "slack": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-slack"],
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
       "env": {
-        "SLACK_BOT_TOKEN": "xoxb-your-token-here"
+        "SLACK_BOT_TOKEN": "xoxb-1234567890123-1234567890123-AbCdEfGhIjKlMnOpQrStUvWx",
+        "SLACK_TEAM_ID": "T024BE7LD"
       }
     },
     "postgres-db": {
       "command": "npx",
-      "args": ["@modelcontextprotocol/server-postgres"],
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://app_user:Pr0d_S3cr3t@db.internal.acme.com:5432/customers"]
+    },
+    "github-tools": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
       "env": {
-        "POSTGRES_CONNECTION_STRING": "postgresql://user:password@localhost:5432/mydb"
+        "GITHUB_TOKEN": "ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890"
       }
     },
-    "custom-shell-tools": {
+    "openai-assistant": {
+      "command": "npx",
+      "args": ["-y", "openai-mcp"],
+      "env": {
+        "OPENAI_API_KEY": "sk-aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890abcdefghij"
+      }
+    },
+    "anthropic-claude": {
+      "command": "npx",
+      "args": ["-y", "anthropic-mcp"],
+      "env": {
+        "ANTHROPIC_API_KEY": "sk-ant-aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890abcd"
+      }
+    },
+    "shell-executor": {
       "command": "uvx",
-      "args": ["mcp-shell-tools"]
+      "args": ["mcp-shell"]
     },
     "local-custom-server": {
       "command": "./scripts/my-custom-mcp.py",
